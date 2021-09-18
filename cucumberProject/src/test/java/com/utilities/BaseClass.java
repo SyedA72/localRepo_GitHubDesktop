@@ -50,7 +50,7 @@ public class BaseClass {
 	static {
 
 		try {
-			String path = "/Users/theguruofjafriiii/eclipse-workspace/cucumberProject/src/test/resources/properties/config.properties";
+			String path = "src/test/resources/properties/config.properties";
 			FileInputStream input = new FileInputStream(path);
 
 			configFile = new Properties();

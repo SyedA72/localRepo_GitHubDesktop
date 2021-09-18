@@ -11,6 +11,7 @@ import com.pages.bookPage;
 import com.pages.homePage;
 import com.pages.shopPage;
 import com.utilities.BaseClass;
+import com.utilities.CommonMethods;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -111,9 +112,12 @@ public class homePageStepDefinitions {
 	public void click_on_Reviews_tab_there_should_be_a_review_regarding_the_book_user_clicked_on() throws InterruptedException {
 		// Write code here that turns the phrase above into concrete actions
 		home_page_should_have_three_arrivals_only();
-		JavascriptExecutor js = (JavascriptExecutor) BaseClass.getDriver();
-		js.executeScript("BookPage.reviewTabField.click()");
 		HomePage.seleniumRubyButtonField.click();
+		
+		CommonMethods.wait(3);
+		CommonMethods.jsClick(BookPage.reviewTabField);
+		
+		
 //		Actions action = new Actions(BaseClass.getDriver());
 //action.click(BookPage.reviewTabField).build().perform();
 	//	wait.until(ExpectedConditions.elementToBeClickable(BookPage.reviewTabField)).click();
@@ -122,12 +126,16 @@ public class homePageStepDefinitions {
 		ShopPage.homeButtonField.click();
 		
 		HomePage.thinkingInHTMLButtonField.click();
-		wait.until(ExpectedConditions.elementToBeClickable(BookPage.reviewTabField)).click();
+//		wait.until(ExpectedConditions.elementToBeClickable(BookPage.reviewTabField)).click();
+		CommonMethods.wait(3);
+		CommonMethods.jsClick(BookPage.reviewTabField);
 	//	BookPage.reviewTabField.click();
 		ShopPage.homeButtonField.click();
 
 		HomePage.masteringJAVAScriptButtonField.click();
-		wait.until(ExpectedConditions.elementToBeClickable(BookPage.reviewTabField)).click();
+//		wait.until(ExpectedConditions.elementToBeClickable(BookPage.reviewTabField)).click();
+		CommonMethods.wait(3);
+		CommonMethods.jsClick(BookPage.reviewTabField);
 		//BookPage.reviewTabField.click();
 	}
 

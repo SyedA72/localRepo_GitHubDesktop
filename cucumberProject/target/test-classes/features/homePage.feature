@@ -24,6 +24,7 @@ And click on each image have it redirect you to the next page and confirm they a
 Scenario: Description should be for the image user clicked on
 
 And click on description tab the description should be regarding the book user clicked on
+
 @smokeTest
 Scenario:  Review should be regarding the book user clicked on 
 And Click on Reviews tab there should be a review regarding the book user clicked on 
